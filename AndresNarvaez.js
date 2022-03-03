@@ -66,7 +66,18 @@ let testSampleList = [
 ];
 
 function wordLengthClassifier(wordsList) {
-  }
+    const ordenadoArray = wordsList.sort(function(a,b) {return b.lenght - a.lenght});
+    const tamañoArray = ordenadoArray.lenght
+    let sumatoriaPalabras = 0;
+    wordsList.forEach(word =>{
+        sumatoriaPalabras += word.lenght
+
+    })
+    return {palabraLarga: ordenadoArray[0], palabraCorta: ordenadoArray[tamañoArray-1], promedio: sumatoriaPalabras/tamañoArray}
+
+}
+console.log("Ejercicio3")
+console.log(wordLengthClassifier(testSampleList));
 
 
 /*Dado un string retorna si este es o no un palíndromo. No debe diferenciar entre mayúsculas y minúsculas*/
@@ -77,6 +88,7 @@ let onVerificationWordC = "Gomosos";
 let onVerificationWordD = "Somos";
 
 function palindromeVerifier(word) {
+    
   }
 
 
