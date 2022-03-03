@@ -88,8 +88,21 @@ let onVerificationWordC = "Gomosos";
 let onVerificationWordD = "Somos";
 
 function palindromeVerifier(word) {
-    
-  }
+    const palabraDerecho = word.toLowerCase()
+   const palabraReves = word.toLowerCase().split("").reverse().join("")
+   
+   if(palabraDerecho === palabraReves){
+       console.log("La palabra " + word + " Si es palindromo")
+   }
+   else{
+       console.log("La palabra " + word + " No es palindromo")
+   }
+}
+console.log("Ejercicio 4")
+palindromeVerifier(onVerificationWordA)
+palindromeVerifier(onVerificationWordB)
+palindromeVerifier(onVerificationWordC)
+palindromeVerifier(onVerificationWordD)
 
 
 /*Dado un objeto que contiene una lista de palabras contar el
