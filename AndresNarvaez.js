@@ -116,9 +116,22 @@ let containerTestObject = {
 }
 
 function lettersCounter(objectContainer) {
-
+    let vocal = 0
+    let consonantes = 0
+    objectContainer.list.forEach(letra =>{
+        letra.toLowerCase().split("").forEach(letra => {
+            if(letra === "a" || letra === "e" || letra === "i" || letra === "o" || letra === "u"){
+                vocal += 1
+            } 
+            else{
+                consonantes += 1
+            }
+        })
+    })
+    return [vocal, consonantes]
 }
-
+console.log("Ejercicio 5");
+console.log(lettersCounter(containerTestObject))
 
 /*Dado 2 arreglos de strings retornar un arreglo con todos los strings.*/
 let wordArrayA = ["hola", "¿", "cómo", "estás", "?"];
