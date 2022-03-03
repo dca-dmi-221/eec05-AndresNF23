@@ -34,9 +34,19 @@ let testWordsList = [
 
 // pruebe para cada palabra A, B y C
 function wordSearcherIgnoreCase(targetWord, wordsList) {
-    
+    const newWordlist = wordsList.map(word => word.toUpperCase())
+   if (newWordlist.includes(targetWord.toUpperCase())){
+       console.log("La palabra " + targetWord + " SI está incluída")
+   }
+   else{
+        console.log("La palabra " + targetWord + " NO está incluída")
+   }
 }
 
+console.log("Ejercicio 2")
+wordSearcherIgnoreCase(testTargetWordA, testWordsList);
+wordSearcherIgnoreCase(testTargetWordB, testWordsList);
+wordSearcherIgnoreCase(testTargetWordC, testWordsList);
 
 
 /*Dado un arreglo de strings, retornar la palabra más larga,
@@ -56,8 +66,7 @@ let testSampleList = [
 ];
 
 function wordLengthClassifier(wordsList) {
-    // :)
-}
+  }
 
 
 /*Dado un string retorna si este es o no un palíndromo. No debe diferenciar entre mayúsculas y minúsculas*/
@@ -68,8 +77,7 @@ let onVerificationWordC = "Gomosos";
 let onVerificationWordD = "Somos";
 
 function palindromeVerifier(word) {
-   // :)
-}
+  }
 
 
 /*Dado un objeto que contiene una lista de palabras contar el
