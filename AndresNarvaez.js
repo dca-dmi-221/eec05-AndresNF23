@@ -13,7 +13,7 @@ function separadorCaracteres(word) {
     })
 }
 separadorCaracteres(testWord);
-separadorCaracteres("SoyAndres")
+separadorCaracteres("SoyAndres")    
 
 /*Dado un string buscar en un listado e indicar si se encuentra o no
 ahí contenido, debe soportar mayúsculas y minúsculas sin importar
@@ -174,8 +174,13 @@ let testObjMultiContainer = {
 };
 
 function vocalsRemoverFromObject(objectMultiContainer) {
-    // :)
+    let ArrayCombinao = objectMultiContainer.listA.concat(objectMultiContainer.listB)
+    console.log(ArrayCombinao)
+    let arregloCorregido = ArrayCombinao.map(word => word.normalize('NFD').replace(/[\u0300-\u036f]/g,""))
+    console.log(arregloCorregido)
 }
+
+vocalsRemoverFromObject(testObjMultiContainer);
 
 console.log(vocalsRemoverFromObject(testObjMultiContainer));
 
